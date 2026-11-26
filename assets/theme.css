@@ -3,11 +3,9 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --ink: #0f100f;
+  --ink: #0b0b0a;
   --gold: #d9b537;
   --gold-soft: #e6c85c;
-  --cream: #f6f0d4;
-  --muted: #c9c2aa;
   --line: rgba(217, 181, 55, 0.35);
 }
 
@@ -20,7 +18,7 @@ body {
   font-family: Jost, "Avenir Next", "Segoe UI", sans-serif;
   line-height: 1.55;
   background: var(--ink);
-  color: var(--cream);
+  color: var(--gold);
 }
 
 a { color: inherit; text-decoration: none; }
@@ -38,7 +36,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .nav { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 1.1rem 0; }
 .nav img { width: 2.1rem; display: block; }
 .nav nav { display: flex; flex-wrap: wrap; gap: 1.5rem; font-size: 0.75rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; }
-.nav nav a:hover, .foot a:hover { color: var(--gold); }
+.nav nav a:hover, .foot a:hover { color: var(--gold-soft); text-decoration: underline; }
 
 main { flex: 1; }
 
@@ -52,7 +50,7 @@ h2 { font-size: clamp(1.5rem, 3.4vw, 2.1rem); }
 .subtitle { margin-top: 0.9rem; color: var(--gold); font-size: clamp(1.15rem, 3.6vw, 1.9rem); letter-spacing: 0.08em; text-transform: uppercase; }
 .lede { max-width: 34rem; margin-top: 1.6rem; font-size: 1.15rem; }
 .short-rule { width: 4rem; height: 2px; margin-top: 2rem; background: var(--gold); }
-.note { margin-top: 1.4rem; color: var(--muted); font-size: 0.8rem; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; }
+.note { margin-top: 1.4rem; color: var(--gold); font-size: 0.8rem; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; }
 
 .btn {
   display: inline-block; padding: 0.85rem 1.5rem; border: 0; border-radius: 999px;
@@ -63,30 +61,30 @@ h2 { font-size: clamp(1.5rem, 3.4vw, 2.1rem); }
 .hero .btn { margin-top: 1.8rem; }
 
 .band { padding: 4rem 0; border-top: 1px solid var(--line); text-align: center; }
-.band p { max-width: 36rem; margin: 1rem auto 0; color: var(--muted); font-size: 1.08rem; }
-.band .story { color: var(--cream); font-style: italic; font-size: 1.3rem; }
+.band p { max-width: 36rem; margin: 1rem auto 0; font-size: 1.08rem; }
+.band .story { font-style: italic; font-size: 1.3rem; }
 
-.card { padding: 3.2rem 1.5rem; border-radius: 1.1rem; background: var(--cream); color: var(--ink); text-align: center; }
-.card h2 { color: var(--ink); }
+.card { padding: 3.2rem 1.5rem; border: 2px solid var(--gold); border-radius: 1.1rem; text-align: center; }
 .card p { margin-top: 0.7rem; }
 .list { padding: 1rem 0 4rem; }
 
 .signup-form { display: flex; gap: 0.6rem; max-width: 32rem; margin: 1.5rem auto 0; }
 .signup-form input { flex: 1; min-width: 0; }
 input, select, textarea {
-  padding: 0.85rem 1.1rem; border: 1px solid rgba(15, 16, 15, 0.35); border-radius: 999px;
-  background: #fffdf3; color: var(--ink); font: 400 1rem Jost, sans-serif;
+  padding: 0.85rem 1.1rem; border: 1px solid var(--gold); border-radius: 999px;
+  background: var(--ink); color: var(--gold); font: 400 1rem Jost, sans-serif;
 }
-.card .btn { background: var(--ink); color: var(--cream); }
+input::placeholder { color: var(--gold); opacity: 0.65; }
+select { color-scheme: dark; }
 .signup-feedback { min-height: 1.55rem; }
-.signup-feedback[data-state="error"] { color: #8a2f12; }
+.signup-feedback[data-state="error"] { color: var(--gold-soft); font-weight: 600; }
 
 .support { max-width: 34rem; margin: 1.5rem auto 4rem; }
 .support form { display: grid; gap: 1rem; margin-top: 1.6rem; text-align: left; }
 .support label { display: grid; gap: 0.35rem; font-weight: 500; }
 .support textarea { border-radius: 0.8rem; min-height: 9rem; resize: vertical; }
 
-.foot { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem; padding: 1.5rem 0 2rem; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.9rem; }
+.foot { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem; padding: 1.5rem 0 2rem; border-top: 1px solid var(--line); font-size: 0.9rem; }
 .foot nav { display: flex; flex-wrap: wrap; gap: 1rem; }
 
 .sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }

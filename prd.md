@@ -17,13 +17,13 @@ SAKKAF is a traditional coffee and tea company. The brand sells carefully source
 
 ### Visual identity
 
-The bag's near-black, gold and cream, with the double gold rule. No product photography and no product listings before launch.
+Gold and black only, with the double gold rule. The cream stroke inside the S logo stays. No product photography and no product listings before launch.
 
-| Token | Value     | Usage                          |
-| ----- | --------- | ------------------------------ |
-| Ink   | `#0f100f` | Page background                |
-| Gold  | `#d9b537` | Logo, headlines, rules, buttons |
-| Cream | `#f6f0d4` | Body type and cards            |
+| Token     | Value     | Usage                                    |
+| --------- | --------- | ---------------------------------------- |
+| Ink       | `#0b0b0a` | Backgrounds and type on gold buttons     |
+| Gold      | `#d9b537` | Logo, type, rules, borders and buttons   |
+| Soft gold | `#e6c85c` | Hover and error states                   |
 
 - **Logo:** S mark with steam stroke, and the matching SAKKAF wordmark (`assets/`).
 - **Typeface:** Cinzel for headings. Jost for body text, navigation and buttons.
@@ -76,7 +76,7 @@ Static coming-soon landing page deployed to **www.sakkaf.com**.
 
 ### Shipped
 
-- [x] Brand lockup in the bag's black and gold, with the S mark
+- [x] Brand lockup in black and gold, with the S mark
 - [x] Support page with contact form (`/support`)
 - [x] Product category summary and site copy
 - [x] Social links (TikTok, Instagram, YouTube, Facebook)
