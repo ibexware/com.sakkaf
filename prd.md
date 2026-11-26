@@ -17,16 +17,17 @@ SAKKAF is a traditional coffee and tea company. The brand sells carefully source
 
 ### Visual identity
 
-| Token  | Value     | Usage                         |
-| ------ | --------- | ----------------------------- |
-| Cream  | `#f7f4ef` | Page background               |
-| Coffee | `#2d2926` | Headlines, logo, primary text |
-| Taupe  | `#8e8b82` | Subtitle, labels, accents     |
-| Text   | `#5c5650` | Body copy                     |
+The bag's near-black, gold and cream, with the double gold rule. No product photography and no product listings before launch.
 
-- **Typeface:** Playfair Display (Google Fonts)
-- **Logo weight:** Bold (700) for SAKKAF; regular (400) with wide letter-spacing for subtitle
-- **Tone:** Minimal, traditional, premium
+| Token | Value     | Usage                          |
+| ----- | --------- | ------------------------------ |
+| Ink   | `#0f100f` | Page background                |
+| Gold  | `#d9b537` | Logo, headlines, rules, buttons |
+| Cream | `#f6f0d4` | Body type and cards            |
+
+- **Logo:** S mark with steam stroke, and the matching SAKKAF wordmark (`assets/`).
+- **Typeface:** Cinzel for headings. Jost for body text, navigation and buttons.
+- **Tone:** Direct and in-house. Roasted and blended to order.
 
 ## Products
 
@@ -75,7 +76,8 @@ Static coming-soon landing page deployed to **www.sakkaf.com**.
 
 ### Shipped
 
-- [x] Brand logo, tagline, and Playfair Display styling
+- [x] Brand lockup in the bag's black and gold, with the S mark
+- [x] Support page with contact form (`/support`)
 - [x] Product category summary and site copy
 - [x] Social links (TikTok, Instagram, YouTube, Facebook)
 - [x] Mailing list signup form with success/error feedback

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Support | SAKKAF</title>
+    <meta name="description" content="Contact Sakkaf Coffee &amp; Tea." />
+    <meta name="theme-color" content="#0f100f" />
+    <link rel="icon" href="/assets/sakkaf-mark.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/assets/theme.css" />
+  </head>
+  <body>
+    <div class="wrap rules" aria-hidden="true"></div>
+    <header class="wrap nav">
+      <a href="/" aria-label="Sakkaf home"><img src="/assets/sakkaf-mark.svg" alt="" /></a>
+      <nav aria-label="Primary">
+        <a href="/#story">Our story</a>
+        <a href="/#list">Mailing list</a>
+        <a href="/support">Support</a>
+      </nav>
+    </header>
+
+    <main class="wrap">
+      <div class="card support" id="contact">
+        <h2>Support</h2>
+        <p>Send us a question or an idea.</p>
+        <form action="https://formspree.io/f/xvkabewz" method="POST">
+          <input type="hidden" name="app" value="Sakkaf Coffee website" />
+          <input type="hidden" name="version" id="version" value="" />
+          <label>Your email <input type="email" name="email" autocomplete="email" required /></label>
+          <label>Topic
+            <select name="topic" id="topic">
+              <option value="question">Question</option>
+              <option value="problem">Problem</option>
+              <option value="feature">Feature idea</option>
+            </select>
+          </label>
+          <label>Message <textarea name="message" required></textarea></label>
+          <button class="btn" type="submit">Send</button>
+        </form>
+      </div>
+    </main>
+
+    <footer class="wrap foot">
+      <p>Sakkaf LLC · Ashburn, VA</p>
+      <nav aria-label="Social media and support">
+        <a href="https://www.tiktok.com/@sakkaf.com" target="_blank" rel="noopener noreferrer">TikTok</a>
+        <a href="https://www.instagram.com/sakkaf_coffee" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://www.youtube.com/@sakkaf_coffee" target="_blank" rel="noopener noreferrer">YouTube</a>
+        <a href="https://www.facebook.com/people/Sakkaf/61590856212764" target="_blank" rel="noopener noreferrer">Facebook</a>
+        <a href="/support">Support</a>
+      </nav>
+    </footer>
+
+    <script>
+      (function () {
+        const params = new URLSearchParams(location.search);
+        const topic = document.getElementById("topic");
+        const wanted = params.get("topic");
+        if (Array.from(topic.options).some((o) => o.value === wanted)) topic.value = wanted;
+        document.getElementById("version").value = params.get("v") || "";
+      })();
+    </script>
+  </body>
+</html>
