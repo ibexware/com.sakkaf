@@ -5,42 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SAKKAF | Coffee &amp; Tea</title>
     <meta name="description" content="SAKKAF is a traditional coffee and tea company, rooted in craft and origin. Our online shop is opening soon." />
-    <meta name="theme-color" content="#0b0b0a" />
+    <meta name="theme-color" content="#131312" />
     <link rel="icon" href="/assets/sakkaf-mark.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="/assets/theme.css" />
+    <link rel="stylesheet" href="/assets/theme.css?v=3" />
   </head>
   <body>
-    <div class="wrap rules" aria-hidden="true"></div>
     <header class="wrap nav">
-      <a href="/" aria-label="Sakkaf home"><img src="/assets/sakkaf-mark.svg" alt="" /></a>
+      <a class="brand" href="/"><img src="/assets/sakkaf-wordmark-foil.svg" alt="Sakkaf home" /></a>
       <nav aria-label="Primary">
-        <a href="#story">Our story</a>
-        <a href="#list">Mailing list</a>
+        <a href="/#offer">What we make</a>
+        <a href="/#story">Our story</a>
         <a href="/support">Support</a>
       </nav>
     </header>
 
     <main>
-      <section class="wrap hero">
-        <img class="mark" src="/assets/sakkaf-mark.svg" alt="" />
-        <h1><img src="/assets/sakkaf-wordmark.svg" alt="SAKKAF" /></h1>
-        <p class="subtitle">Coffee &amp; Tea</p>
-        <p class="lede">A traditional coffee and tea company, rooted in craft and origin.</p>
-        <div class="short-rule" aria-hidden="true"></div>
-        <p class="note">Online shop opening soon</p>
-        <a class="btn" href="#list">Join the list</a>
-      </section>
-
-      <section class="wrap band" id="story">
-        <h2>Our story</h2>
-        <p class="story">Sakkaf comes from <em>saqf</em>, meaning roof.<br />Roasted &amp; blended to order, under one roof.<br />Coffee from the family table.</p>
-        <p>We source single origin coffees from around the world. Our coffee and tea blends are traditional recipes from the Middle East, North Africa, and Africa.</p>
-      </section>
-
-      <section class="wrap list" id="list">
-        <div class="card">
-          <h2>Join the mailing list</h2>
-          <p>Be first to know when our shop opens.</p>
+      <section class="wrap hero" id="list">
+        <div class="intro">
+          <p class="eyebrow">Online shop opening soon</p>
+          <h1>Coffee &amp; tea,<br />rooted in craft<br />and origin.</h1>
+          <p class="lede">Roasted and blended to order, under one roof. Be first to know when our shop opens.</p>
           <form class="signup-form" id="signup-form" action="/api/subscribe" method="post">
             <label class="sr-only" for="email">Email address</label>
             <input id="email" name="email" type="email" placeholder="Email address" autocomplete="email" required />
@@ -48,6 +32,34 @@
           </form>
           <p class="signup-feedback" id="signup-feedback" aria-live="polite"></p>
         </div>
+        <div class="stage" aria-hidden="true">
+          <div class="bag">
+            <img class="bag-mark" src="/assets/sakkaf-mark-foil.svg" alt="" />
+            <img class="bag-word" src="/assets/sakkaf-wordmark-foil.svg" alt="" />
+            <span>Coffee &amp; Tea</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="wrap offer" id="offer">
+        <article>
+          <h2>Single origin coffee</h2>
+          <p>Sourced from growers and regions around the world.</p>
+        </article>
+        <article>
+          <h2>Coffee blends</h2>
+          <p>Traditional recipes from the Middle East, North Africa, and Africa.</p>
+        </article>
+        <article>
+          <h2>Tea blends</h2>
+          <p>Traditional recipes from the Middle East, North Africa, and Africa.</p>
+        </article>
+      </section>
+
+      <section class="wrap story" id="story">
+        <p class="eyebrow">Our story</p>
+        <h2>Sakkaf comes from <em>saqf</em>, meaning roof.</h2>
+        <p>Roasted and blended to order, under one roof. Coffee from the family table.</p>
       </section>
     </main>
 

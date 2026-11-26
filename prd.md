@@ -17,16 +17,19 @@ SAKKAF is a traditional coffee and tea company. The brand sells carefully source
 
 ### Visual identity
 
-Gold and black only, with the double gold rule. The cream stroke inside the S logo stays. No product photography and no product listings before launch.
+Matte, like the bag, with the gold logo as the accent. Modern and spacious. No product photography and no product listings before launch; the hero shows a plain branded pouch drawn in CSS.
 
-| Token     | Value     | Usage                                    |
-| --------- | --------- | ---------------------------------------- |
-| Ink       | `#0b0b0a` | Backgrounds and type on gold buttons     |
-| Gold      | `#d9b537` | Logo, type, rules, borders and buttons   |
-| Soft gold | `#e6c85c` | Hover and error states                   |
+| Token      | Value     | Usage                                |
+| ---------- | --------- | ------------------------------------ |
+| Matte      | `#131312` | Page background, with subtle grain   |
+| Surface    | `#1a1a18` | Cards and form fields                |
+| Text       | `#ece8de` | Headlines and body                   |
+| Muted      | `#b6b2a6` | Secondary text                       |
+| Gold       | `#cfae58` | Labels, accents; gradient on buttons |
+| Light gold | `#e6cd85` | Hover and emphasis                   |
 
-- **Logo:** S mark with steam stroke, and the matching SAKKAF wordmark (`assets/`).
-- **Typeface:** Cinzel for headings. Jost for body text, navigation and buttons.
+- **Logo:** S mark with steam stroke, and the matching SAKKAF wordmark; foil-gradient versions in `assets/`.
+- **Typeface:** Jost (light) for headings and body. Cinzel appears only inside the wordmark.
 - **Tone:** Direct and in-house. Roasted and blended to order.
 
 ## Products

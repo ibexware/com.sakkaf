@@ -1,12 +1,16 @@
-@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Jost:ital,wght@0,400;0,500;0,600;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,500;1,300&display=swap");
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --ink: #0b0b0a;
-  --gold: #d9b537;
-  --gold-soft: #e6c85c;
-  --line: rgba(217, 181, 55, 0.35);
+  --matte: #131312;
+  --surface: #1a1a18;
+  --text: #ece8de;
+  --muted: #b6b2a6;
+  --gold: #cfae58;
+  --gold-light: #e6cd85;
+  --line: rgba(236, 232, 222, 0.11);
+  --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .07 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
 html { scroll-behavior: smooth; }
@@ -16,80 +20,94 @@ body {
   display: flex;
   flex-direction: column;
   font-family: Jost, "Avenir Next", "Segoe UI", sans-serif;
-  line-height: 1.55;
-  background: var(--ink);
-  color: var(--gold);
+  font-weight: 300;
+  line-height: 1.6;
+  background: var(--grain), var(--matte);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
 }
 
 a { color: inherit; text-decoration: none; }
 a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
-  outline: 2px solid var(--gold); outline-offset: 3px;
+  outline: 2px solid var(--gold-light); outline-offset: 3px;
 }
-
-.wrap { width: min(1080px, calc(100% - 2.5rem)); margin: 0 auto; }
-
-.rules { padding-top: 1.1rem; }
-.rules::before, .rules::after { content: ""; display: block; background: var(--gold); }
-.rules::before { height: 2px; margin-bottom: 7px; }
-.rules::after { height: 3px; }
-
-.nav { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 1.1rem 0; }
-.nav img { width: 2.1rem; display: block; }
-.nav nav { display: flex; flex-wrap: wrap; gap: 1.5rem; font-size: 0.75rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; }
-.nav nav a:hover, .foot a:hover { color: var(--gold-soft); text-decoration: underline; }
 
 main { flex: 1; }
+.wrap { width: min(1160px, calc(100% - 3rem)); margin-inline: auto; }
 
-h1, h2 { font-family: Cinzel, Georgia, serif; font-weight: 600; color: var(--gold); line-height: 1.2; }
-h2 { font-size: clamp(1.5rem, 3.4vw, 2.1rem); }
+.nav { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; padding-block: 1.6rem; }
+.brand img { display: block; width: 8.5rem; }
+.nav nav, .foot nav { display: flex; flex-wrap: wrap; gap: 0.5rem 2rem; }
+.nav nav { font-size: 0.95rem; font-weight: 400; color: var(--muted); }
+.nav a:hover, .foot a:hover { color: var(--gold-light); }
 
-.hero { display: flex; flex-direction: column; align-items: center; text-align: center; padding: 2.5rem 0 4.5rem; }
-.hero .mark { width: min(38vw, 190px); }
-.hero h1 { width: min(100%, 560px); margin-top: 2.2rem; }
-.hero h1 img { display: block; width: 100%; }
-.subtitle { margin-top: 0.9rem; color: var(--gold); font-size: clamp(1.15rem, 3.6vw, 1.9rem); letter-spacing: 0.08em; text-transform: uppercase; }
-.lede { max-width: 34rem; margin-top: 1.6rem; font-size: 1.15rem; }
-.short-rule { width: 4rem; height: 2px; margin-top: 2rem; background: var(--gold); }
-.note { margin-top: 1.4rem; color: var(--gold); font-size: 0.8rem; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; }
+h1, h2 { font-weight: 300; letter-spacing: -0.02em; line-height: 1.08; }
+h1 { font-size: clamp(2.7rem, 6vw, 4.9rem); }
+em { color: var(--gold-light); }
+.eyebrow { margin-bottom: 1.2rem; color: var(--gold); font-size: 0.75rem; font-weight: 500; letter-spacing: 0.24em; text-transform: uppercase; }
+.lede { max-width: 28rem; margin-top: 1.5rem; color: var(--muted); font-size: 1.15rem; }
 
-.btn {
-  display: inline-block; padding: 0.85rem 1.5rem; border: 0; border-radius: 999px;
-  background: var(--gold); color: var(--ink); font: 600 0.95rem/1 Jost, sans-serif; cursor: pointer;
-}
-.btn:hover { background: var(--gold-soft); }
+.hero { display: grid; grid-template-columns: 1.1fr 0.9fr; align-items: center; gap: 3rem; padding-block: 3rem 6rem; }
+
+.signup-form { display: flex; gap: 0.4rem; max-width: 29rem; margin-top: 2rem; padding: 0.35rem; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); }
+.signup-form:focus-within { border-color: var(--gold); }
+.signup-form input { flex: 1; min-width: 0; padding: 0.6rem 1.1rem; border: 0; background: transparent; color: var(--text); font: 300 1rem Jost, sans-serif; }
+.signup-form input::placeholder { color: var(--muted); }
+.btn { padding: 0.85rem 1.5rem; border: 0; border-radius: 999px; background: linear-gradient(110deg, #c3a24c, #e8d18e 50%, #c3a24c); color: #191509; font: 500 0.95rem/1 Jost, sans-serif; cursor: pointer; }
+.btn:hover { filter: brightness(1.08); }
 .btn:disabled { opacity: 0.55; cursor: not-allowed; }
-.hero .btn { margin-top: 1.8rem; }
+.signup-feedback { min-height: 1.6rem; margin-top: 0.8rem; color: var(--gold-light); }
+.signup-feedback[data-state="error"] { color: #f0a58c; }
 
-.band { padding: 4rem 0; border-top: 1px solid var(--line); text-align: center; }
-.band p { max-width: 36rem; margin: 1rem auto 0; font-size: 1.08rem; }
-.band .story { font-style: italic; font-size: 1.3rem; }
-
-.card { padding: 3.2rem 1.5rem; border: 2px solid var(--gold); border-radius: 1.1rem; text-align: center; }
-.card p { margin-top: 0.7rem; }
-.list { padding: 1rem 0 4rem; }
-
-.signup-form { display: flex; gap: 0.6rem; max-width: 32rem; margin: 1.5rem auto 0; }
-.signup-form input { flex: 1; min-width: 0; }
-input, select, textarea {
-  padding: 0.85rem 1.1rem; border: 1px solid var(--gold); border-radius: 999px;
-  background: var(--ink); color: var(--gold); font: 400 1rem Jost, sans-serif;
+/* A matte pouch carrying the gold logo, drawn in CSS. */
+.stage { position: relative; display: flex; justify-content: center; padding-bottom: 1.5rem; background: radial-gradient(ellipse 60% 52% at 50% 46%, rgba(236, 232, 222, 0.09), transparent 70%); }
+.stage::after { content: ""; position: absolute; bottom: 0; width: 70%; height: 2.6rem; border-radius: 50%; background: rgba(0, 0, 0, 0.75); filter: blur(18px); }
+.bag {
+  position: relative; z-index: 1;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  width: min(100%, 22rem); aspect-ratio: 2 / 3; padding: 3rem 2rem 2rem;
+  border-radius: 0.5rem 0.5rem 1.4rem 1.4rem;
+  background:
+    var(--grain),
+    linear-gradient(98deg, #0b0b0b 0%, #242422 9%, #191918 24%, #1d1d1b 62%, #121211 90%, #1b1b19 96%, #0a0a0a 100%);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08), inset 0 -2.5rem 2.5rem -1.5rem rgba(0, 0, 0, 0.6), 0 2.5rem 4rem rgba(0, 0, 0, 0.45);
 }
-input::placeholder { color: var(--gold); opacity: 0.65; }
-select { color-scheme: dark; }
-.signup-feedback { min-height: 1.55rem; }
-.signup-feedback[data-state="error"] { color: var(--gold-soft); font-weight: 600; }
+.bag::before { content: ""; position: absolute; inset: 0 0 auto; height: 2.1rem; border-radius: inherit; border-bottom: 1px solid rgba(0, 0, 0, 0.6); background: repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.045) 0 2px, transparent 2px 5px); }
+.bag::after { content: ""; position: absolute; top: 3.2rem; left: 0; right: 0; height: 3px; background: rgba(0, 0, 0, 0.45); box-shadow: 0 1px 0 rgba(255, 255, 255, 0.06); }
+.bag-mark { width: 42%; }
+.bag-word { width: 82%; margin-top: 1.8rem; }
+.bag span { margin-top: 0.6rem; color: var(--gold); font-size: 0.8rem; font-weight: 400; letter-spacing: 0.34em; text-transform: uppercase; }
 
-.support { max-width: 34rem; margin: 1.5rem auto 4rem; }
-.support form { display: grid; gap: 1rem; margin-top: 1.6rem; text-align: left; }
-.support label { display: grid; gap: 0.35rem; font-weight: 500; }
-.support textarea { border-radius: 0.8rem; min-height: 9rem; resize: vertical; }
+.offer { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; padding-block: 2rem; }
+.offer article { padding: 2.2rem 1.8rem 2.4rem; border: 1px solid var(--line); border-radius: 1.2rem; background: var(--surface); }
+.offer article::before { content: ""; display: block; width: 2rem; height: 1px; margin-bottom: 2.4rem; background: var(--gold); }
+.offer h2 { font-size: 1.55rem; }
+.offer p { margin-top: 0.8rem; color: var(--muted); }
 
-.foot { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem; padding: 1.5rem 0 2rem; border-top: 1px solid var(--line); font-size: 0.9rem; }
-.foot nav { display: flex; flex-wrap: wrap; gap: 1rem; }
+.story { padding-block: 7rem; text-align: center; }
+.story h2 { max-width: 18ch; margin-inline: auto; font-size: clamp(2.2rem, 5vw, 3.8rem); }
+.story h2 + p { margin-top: 1.5rem; color: var(--muted); font-size: 1.15rem; }
+
+.support { max-width: 32rem; margin: 2rem auto 5rem; }
+.support h1 { font-size: clamp(2.4rem, 5vw, 3.4rem); }
+.support form { display: grid; gap: 1.2rem; margin-top: 2.2rem; }
+.support label { display: grid; gap: 0.45rem; color: var(--muted); font-size: 0.95rem; font-weight: 400; }
+.support input, .support select, .support textarea { padding: 0.9rem 1rem; border: 1px solid var(--line); border-radius: 0.7rem; background: var(--surface); color: var(--text); font: 300 1rem Jost, sans-serif; color-scheme: dark; }
+.support textarea { min-height: 9rem; resize: vertical; }
+.support .btn { justify-self: start; padding-inline: 2.2rem; }
+
+.foot { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem; padding-block: 2rem 2.5rem; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.9rem; }
 
 .sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 
-@media (max-width: 560px) {
-  .signup-form { flex-direction: column; }
+@media (max-width: 820px) {
+  .hero { grid-template-columns: 1fr; padding-block: 1.5rem 4rem; }
+  .offer { grid-template-columns: 1fr; }
+  .bag { width: min(78%, 20rem); }
+  .story { padding-block: 5rem; }
+}
+@media (max-width: 480px) {
+  .signup-form { flex-direction: column; padding: 0; border: 0; background: none; }
+  .signup-form input { flex: none; padding-block: 0.85rem; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
