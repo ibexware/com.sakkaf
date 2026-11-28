@@ -74,7 +74,7 @@ em { color: var(--gold-light); }
 }
 .bag::before { content: ""; position: absolute; inset: 0 0 auto; height: 2.1rem; border-radius: inherit; border-bottom: 1px solid rgba(0, 0, 0, 0.6); background: repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.045) 0 2px, transparent 2px 5px); }
 .bag::after { content: ""; position: absolute; top: 3.2rem; left: 0; right: 0; height: 3px; background: rgba(0, 0, 0, 0.45); box-shadow: 0 1px 0 rgba(255, 255, 255, 0.06); }
-.bag-mark { width: 42%; }
+.bag-mark { width: 74%; }
 .bag-word { width: 82%; margin-top: 1.8rem; }
 .bag span { margin-top: 0.6rem; color: var(--gold); font-size: 0.8rem; font-weight: 400; letter-spacing: 0.34em; text-transform: uppercase; }
 

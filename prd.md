@@ -28,8 +28,8 @@ Matte, like the bag, with the gold logo as the accent. Modern and spacious. No p
 | Gold       | `#cfae58` | Labels, accents; gradient on buttons |
 | Light gold | `#e6cd85` | Hover and emphasis                   |
 
-- **Logo:** S mark with steam stroke, and the matching SAKKAF wordmark; foil-gradient versions in `assets/`.
-- **Typeface:** Jost (light) for headings and body. Cinzel appears only inside the wordmark.
+- **Logo:** gold brush-stroke ribbon mark around a coffee bean, with the serif SAKKAF wordmark; foil-gradient versions in `assets/`.
+- **Typeface:** Jost (light) for headings and body. The wordmark is outlined artwork, not a web font.
 - **Tone:** Direct and in-house. Roasted and blended to order.
 
 ## Products
